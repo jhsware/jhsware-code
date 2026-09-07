@@ -83,7 +83,7 @@ Operations:
 - analyze: Run 'dart analyze' to check for errors (supports target file/directory)
 - test: Run 'dart test' to execute tests
 - run: Run 'dart run' to execute a Dart program
-- format: Run 'dart format' to format code
+- format: Run 'dart format' on the given target file or directory (target is REQUIRED)
 - pub-get: Run 'dart pub get' to fetch dependencies
 - pub-run: Run 'dart pub run <package> [args...]' - used for code generation
            (e.g. target='build_runner', args=['build', '--delete-conflicting-outputs']).
@@ -129,7 +129,9 @@ useful for monorepo packages (e.g. working_dir='packages/foo' for code generatio
         ),
         'target': JsonSchema.string(
           description:
-              'Target file or directory for run/test/analyze/format operations. Default: current directory. For pub-run this is the package name (REQUIRED), e.g. "build_runner".',
+              'Target file or directory for run/test/analyze operations (default: current directory). '
+              'REQUIRED for format: the file or directory to format (no default, never the whole project implicitly). '
+              'For pub-run this is the package name (REQUIRED), e.g. "build_runner".',
         ),
         'args': JsonSchema.array(
           items: JsonSchema.string(),
@@ -271,10 +273,15 @@ Future<CallToolResult> _handleDartRunner(
           allowFallback: allowFallback,
         );
       case 'format':
-        final target = args['target'] as String? ?? '.';
+        // No default target: formatting the whole project is destructive
+        // and must be an explicit choice by the caller.
+        final target = args['target'] as String?;
+        if (requireString(target, 'target') case final error?) {
+          return error;
+        }
         return await _runDartCommandSync(projectRoot, workingDir, [
           'format',
-          target,
+          target!,
           ...?_getExtraArgs(args),
         ], allowFallback: allowFallback);
       case 'pub-get':
