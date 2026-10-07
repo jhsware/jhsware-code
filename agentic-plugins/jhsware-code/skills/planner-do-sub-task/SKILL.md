@@ -1,7 +1,7 @@
 ---
 name: planner-do-sub-task
 description: "Perform a task found in the planner tool. The user passes a sub-task prompt from planner: get-subtask-prompt."
-allowed-tools: planner, filesystem, git, fetch, flutter-runner, dart-runner, code-index
+allowed-tools: planner, filesystem, git, fetch, code-index
 model: opus
 context: fork
 agent: task-agent
@@ -35,6 +35,8 @@ When processing a step:
 ## Tool Reference
 
 All tool calls MUST include the `project_dir` parameter matching one of the registered project directories. Omitting `project_dir` will return a validation error.
+
+Use runner-agent to run code test, analyze or build the project.
 
 Use filesystem (jhsware_code_filesystem) to read, search and edit files.
 Use git (jhsware_code_git) for git operations.

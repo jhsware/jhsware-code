@@ -1,7 +1,7 @@
 ---
 name: planner-plan
 description: Create a plan and use the planner tool to create one or more tasks with steps that describe how to perform the plan. Can also create tasks from slates, linking tasks to backlog items.
-allowed-tools: planner, filesystem, git, fetch, convert, flutter-runner, dart-runner, code-index
+allowed-tools: planner, filesystem, git, fetch, convert, code-index
 model: opus
 ---
 
@@ -340,6 +340,8 @@ Do not delete files, ask user to delete them.
 Do not run bash commands, ask user to do this.
 
 Use planner (jhsware_code_planner) to interact with the task planner and backlog.
+
+Use runner-agent to run code test, analyze or build the project.
 
 The following tool calls MUST include the `project_dir` parameter matching one of the registered project directories. Omitting `project_dir` will return a validation error:
 

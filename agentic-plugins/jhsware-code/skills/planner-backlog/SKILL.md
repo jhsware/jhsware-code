@@ -1,7 +1,7 @@
 ---
 name: planner-backlog
 description: Add items to the backlog. Allows creating, updating, and listing backlog items categorized as features, improvements, bugs, or changes.
-allowed-tools: planner, filesystem, git, fetch, flutter-runner, dart-runner, code-index
+allowed-tools: planner, filesystem, git, fetch, code-index
 model: opus
 ---
 
@@ -82,6 +82,8 @@ After creating or updating items, list items to confirm the changes were applied
 ## Tool Reference
 
 All tool calls MUST include the `project_dir` parameter matching one of the registered project directories. Omitting `project_dir` will return a validation error.
+
+Use runner-agent to run code test, analyze or build the project.
 
 Use filesystem (jhsware_code_filesystem) to read, search and edit files.
 Use git (jhsware_code_git) for git operations.

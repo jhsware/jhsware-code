@@ -1,7 +1,7 @@
 ---
 name: planner-do-parent-task
 description: Perform a parent task found in the planner tool. The user passes a task prompt.
-allowed-tools: planner, filesystem, git, fetch, flutter-runner, dart-runner, code-index
+allowed-tools: planner, filesystem, git, fetch, code-index
 model: opus
 ---
 ultrathink
@@ -33,6 +33,8 @@ Using worktrees allows us to work on tasks in parallel. But creating a worktree 
 ## Tool Reference
 
 All tool calls MUST include the `project_dir` parameter matching one of the registered project directories. Omitting `project_dir` will return a validation error.
+
+Use runner-agent to run code test, analyze or build the project.
 
 Use filesystem (jhsware_code_filesystem) to read, search and edit files.
 Use git (jhsware_code_git) for git operations.
