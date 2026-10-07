@@ -1,5 +1,5 @@
 ---
-name: task-agent
+name: runner-agent
 description: This agent allows us to run development tool actions such as building, testing and analyzing code, while limiting token usage.
 tools: filesystem, flutter-runner, dart-runner
 disallowed-tools: Bash, Read, Write, Edit, Cowork
