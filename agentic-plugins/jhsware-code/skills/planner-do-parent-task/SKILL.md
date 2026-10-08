@@ -34,11 +34,9 @@ Using worktrees allows us to work on tasks in parallel. But creating a worktree 
 
 All tool calls MUST include the `project_dir` parameter matching one of the registered project directories. Omitting `project_dir` will return a validation error.
 
-Use runner-agent to run code test, analyze or build the project.
-
 Use filesystem (jhsware_code_filesystem) to read, search and edit files.
 Use git (jhsware_code_git) for git operations.
-Use flutter (jhsware_code_flutter_runner) or dart (jhsware_code_dart_runner) to run code test, analyze or build the project. Use the `pub-run` operation for code generation (e.g. `build_runner build --delete-conflicting-outputs`). For monorepo sub-packages, pass the optional `working_dir` parameter (relative to `project_dir`, e.g. `working_dir="packages/foo"`).
+Use the agent runner-agent to run code test, analyze or build the project. Use runner-agent for flutter or dart code generation.
 
 Do not use native tools: Bash, Read, Write, Edit, Git.
 Do not delete files, ask user to delete them.
