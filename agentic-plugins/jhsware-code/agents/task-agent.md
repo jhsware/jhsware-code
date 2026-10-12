@@ -1,7 +1,7 @@
 ---
 name: task-agent
 description: This agent allows us to process sub-tasks whith a fresh context.
-tools: filesystem, planner, git, fetch, flutter-runner, dart-runner, code-index
+tools: mcp__remote-devices__jhsware_code_filesystem-filesystem, mcp__remote-devices__jhsware_code_planner-planner, mcp__remote-devices__jhsware_code_git-git, mcp__remote-devices__jhsware_code_fetch-fetch, mcp__remote-devices__jhsware_code_code_index-code-index
 disallowed-tools: Bash, Read, Write, Edit, Cowork
 permission-mode: dontAsk, acceptEdits
 model: opus
