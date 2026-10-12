@@ -2,8 +2,8 @@
 name: planner-agent
 description: Create a plan and use the planner tool to create one or more tasks with steps that describe how to perform the plan.
 tools: mcp__remote-devices__jhsware_code_filesystem-filesystem, mcp__remote-devices__jhsware_code_planner-planner, mcp__remote-devices__jhsware_code_git-git, mcp__remote-devices__jhsware_code_fetch-fetch, mcp__remote-devices__jhsware_code_code_index-code-index
-disallowed-tools: Bash, Read, Write, Edit, Cowork
-permission-mode: dontAsk, plan
+disallowedTools: Bash, Read, Write, Edit, Cowork
+permissionMode: dontAsk, plan
 model: opus
 skills:
   - planner-plan

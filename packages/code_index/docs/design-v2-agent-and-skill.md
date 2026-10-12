@@ -25,8 +25,8 @@ Division of extraction labor (from the parent design): **the MCP computes layer 
 name: code-index-agent
 description: Index code files for quick and token efficient exploration and search in code base.
 tools: filesystem, code-index
-disallowed-tools: Bash, Read, Write, Edit, Cowork
-permission-mode: dontAsk
+disallowedTools: Bash, Read, Write, Edit, Cowork
+permissionMode: dontAsk
 model: haiku
 ```
 

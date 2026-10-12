@@ -2,8 +2,8 @@
 name: runner-agent
 description: This agent allows us to run development tool actions such as building, testing and analyzing code, while limiting token usage.
 tools: mcp__remote-devices__jhsware_code_filesystem__filesystem, mcp__remote-devices__jhsware_code_flutter_runner__flutter-runner, mcp__remote-devices__jhsware_code_dart_runner__dart-runner
-disallowed-tools: Bash, Read, Write, Edit, Cowork
-permission-mode: dontAsk, acceptEdits
+disallowedTools: Bash, Read, Write, Edit, Cowork
+permissionMode: dontAsk, acceptEdits
 model: sonnet
 skills:
   - flutter-runner

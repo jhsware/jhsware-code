@@ -104,7 +104,7 @@ maxTurns: 100
 # Purpose: Controls how the agent handles permission requests for tool use.
 #   In headless server operation, permissions are typically bypassed, but this
 #   field allows fine-grained control if needed.
-# Maps to CLI flag: --permission-mode
+# Maps to CLI flag: --permissionMode
 # permissionMode: "auto"
 
 
@@ -154,7 +154,7 @@ allowedTools:
 # Constraints: Same pattern as allowedTools entries.
 # Purpose: Explicitly block specific tools. Takes precedence over allowedTools.
 #   Use to prevent the agent from using potentially dangerous tools.
-# Maps to CLI flag: --disallowed-tools (comma-separated)
+# Maps to CLI flag: --disallowedTools (comma-separated)
 # disallowedTools:
   - "Bash"
   - "Edit"
