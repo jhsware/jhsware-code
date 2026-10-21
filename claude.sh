@@ -5,7 +5,7 @@ set -e
 set -m
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PLANNER_DATA_ROOT=${SSH_KEY:-"$HOME/Library/Application Support/se.urbantalk.planner-app"}
+PLANNER_DATA_ROOT=${PLANNER_DATA_ROOT:-"$HOME/Library/Application Support/se.urbantalk.planner-app"}
 
 # planner_remote -> planner_server connection.
 # Values may come from the environment or the matching CLI flags below.
