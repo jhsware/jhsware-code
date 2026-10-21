@@ -9,6 +9,7 @@ in pkgs.mkShell rec {
 
   buildInputs = with pkgs; [    
     pkgs.dart
+    pkgs.difftastic
     pkgs.openssl
     pkgs.gnupg           # For GPG commit signing
     pkgs.pinentry-curses # For GPG passphrase entry (terminal-based)
