@@ -1,7 +1,17 @@
 ---
 name: planner-do-sub-task
 description: "Perform a task found in the planner tool. The user passes a sub-task prompt from planner: get-subtask-prompt."
-allowed-tools: planner, filesystem, git, fetch, code-index
+allowed-tools:
+  - mcp__jhsware_code_planner__planner
+  - mcp__jhsware_code_filesystem__filesystem
+  - mcp__jhsware_code_git__git
+  - mcp__jhsware_code_fetch__fetch
+  - mcp__jhsware_code_code_index__code-index
+disallowed-tools:
+  - Bash
+  - Read
+  - Write
+  - Edit
 model: opus
 context: fork
 agent: task-agent

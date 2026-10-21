@@ -1,7 +1,17 @@
 ---
 name: planner-slate
 description: Create slates and select appropriate backlog items for them. An item is part of the backlog if it doesn't belong to any slate.
-allowed-tools: planner, filesystem, git, fetch, code-index
+allowed-tools:
+  - mcp__jhsware_code_planner__planner
+  - mcp__jhsware_code_filesystem__filesystem
+  - mcp__jhsware_code_git__git
+  - mcp__jhsware_code_fetch__fetch
+  - mcp__jhsware_code_code_index__code-index
+disallowed-tools:
+  - Bash
+  - Read
+  - Write
+  - Edit
 model: opus
 ---
 

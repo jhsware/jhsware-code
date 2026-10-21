@@ -1,7 +1,14 @@
 ---
 name: scan-email
 description: Perform an analysis and extract content from an e-mail
-allowed-tools: filesystem, apple-mail
+allowed-tools:
+  - mcp__jhsware_code_filesystem__filesystem
+  - mcp__jhsware_code_apple_mail__apple-mail
+disallowed-tools:
+  - Bash
+  - Read
+  - Write
+  - Edit
 model: sonnet
 context: fork
 ---

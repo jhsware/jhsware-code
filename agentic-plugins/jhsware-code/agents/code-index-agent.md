@@ -1,8 +1,8 @@
 ---
 name: code-index-agent
 description: Index code files for quick and token efficient exploration and search in code base.
-tools: mcp__remote-devices__jhsware_code_filesystem-filesystem, mcp__remote-devices__jhsware_code_code_index-code-index
-disallowedTools: Bash, Read, Write, Edit, Cowork
+tools: mcp__jhsware_code_filesystem__filesystem, mcp__jhsware_code_code_index__code-index
+disallowedTools: Bash, Read, Write, Edit
 permissionMode: dontAsk
 model: haiku
 ---

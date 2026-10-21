@@ -1,7 +1,14 @@
 ---
 name: code-index
 description: Query the layered code index for token-efficient codebase exploration and search.
-allowed-tools: filesystem, code-index
+allowed-tools:
+  - mcp__jhsware_code_filesystem__filesystem
+  - mcp__jhsware_code_code_index__code-index
+disallowed-tools:
+  - Bash
+  - Read
+  - Write
+  - Edit
 model: haiku
 context: fork
 agent: code-index-agent

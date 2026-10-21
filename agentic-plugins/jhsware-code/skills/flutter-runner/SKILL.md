@@ -1,7 +1,14 @@
 ---
 name: flutter-runner
 description: Run flutter-runner tool to perform development tool actions such as building, testing and linting while limiting token usage.
-allowed-tools: filesystem, flutter-runner
+allowed-tools:
+  - mcp__jhsware_code_filesystem__filesystem
+  - mcp__jhsware_code_flutter_runner__flutter-runner
+disallowed-tools:
+  - Bash
+  - Read
+  - Write
+  - Edit
 model: sonnet
 context: fork
 ---

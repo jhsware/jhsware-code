@@ -1,7 +1,18 @@
 ---
 name: planner-plan
 description: Create a plan and use the planner tool to create one or more tasks with steps that describe how to perform the plan. Can also create tasks from slates, linking tasks to backlog items.
-allowed-tools: planner, filesystem, git, fetch, convert, code-index
+allowed-tools:
+  - mcp__jhsware_code_planner__planner
+  - mcp__jhsware_code_filesystem__filesystem
+  - mcp__jhsware_code_git__git
+  - mcp__jhsware_code_fetch__fetch
+  - mcp__jhsware_code_fetch__fetch-and-transform
+  - mcp__jhsware_code_code_index__code-index
+disallowed-tools:
+  - Bash
+  - Read
+  - Write
+  - Edit
 model: opus
 ---
 

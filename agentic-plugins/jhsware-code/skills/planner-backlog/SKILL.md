@@ -1,7 +1,17 @@
 ---
 name: planner-backlog
 description: Add items to the backlog. Allows creating, updating, and listing backlog items categorized as features, improvements, bugs, or changes.
-allowed-tools: planner, filesystem, git, fetch, code-index
+allowed-tools:
+  - mcp__jhsware_code_planner__planner
+  - mcp__jhsware_code_filesystem__filesystem
+  - mcp__jhsware_code_git__git
+  - mcp__jhsware_code_fetch__fetch
+  - mcp__jhsware_code_code_index__code-index
+disallowed-tools:
+  - Bash
+  - Read
+  - Write
+  - Edit
 model: opus
 ---
 
