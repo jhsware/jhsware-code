@@ -1,6 +1,6 @@
 ---
-name: planner-do-sub-task
-description: "Perform a task as described in the task. Use planner to create a task to plan and track work."
+name: planner-do-ad-hoc-task
+description: "Perform a task as described in the chat. Use planner to create tasks to plan and track work."
 allowed-tools:
   - mcp__jhsware_code_planner__planner
   - mcp__jhsware_code_filesystem__filesystem
@@ -17,13 +17,9 @@ model: opus
 
 ultrathink
 
-The task prompt contains two distinct sections:
-- **Task context** — title, details (background, purpose, files, acceptance criteria). This is reference information.
-- **`## Steps to perform`** — the numbered list of actual steps to execute. Only perform steps listed under this header.
-
 When working on an ad hoc task:
 - [ ] Step 1: Present an overview of the plan to the user
-- [ ] Step 2: When the user is satisfied, create a plan for the appropriate project using planner
+- [ ] Step 2: When the user is satisfied, create a plan with skill planner-plan for the appropriate project and set status to todo
 - [ ] Step 3: Work on the plan according to the steps below
 
 When working on a task:
